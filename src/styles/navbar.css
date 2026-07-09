@@ -1,0 +1,134 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 22px 0;
+  transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav--scrolled {
+  background: rgba(5, 7, 13, 0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 14px 0;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav__brand {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav__bracket {
+  color: var(--accent-cyan);
+}
+
+.nav__links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav__link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: lowercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav__link-index {
+  color: var(--accent-violet);
+  font-size: 11px;
+}
+
+.nav__link:hover {
+  color: var(--text-primary);
+}
+
+.nav__cta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 9px 18px;
+  border: 1px solid var(--border-hover);
+  border-radius: 6px;
+  color: var(--accent-cyan);
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.nav__cta:hover {
+  background: var(--accent-cyan-soft);
+  box-shadow: var(--glow-cyan);
+}
+
+.nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 26px;
+}
+
+.nav__burger span {
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.nav__burger--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav__burger--open span:nth-child(2) {
+  opacity: 0;
+}
+.nav__burger--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav__mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 32px 28px;
+  gap: 18px;
+  background: rgba(5, 7, 13, 0.96);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.nav__mobile-link {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.nav__mobile-link--cta {
+  color: var(--accent-cyan);
+}
+
+@media (max-width: 860px) {
+  .nav__links,
+  .nav__cta {
+    display: none;
+  }
+  .nav__burger {
+    display: flex;
+  }
+}

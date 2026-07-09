@@ -1,0 +1,21 @@
+.footer {
+  border-top: 1px solid var(--border-soft);
+  padding: 28px 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer__text {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer__mono {
+  font-family: var(--font-mono);
+  color: var(--accent-violet);
+}

@@ -1,0 +1,64 @@
+.edu-timeline {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.edu-item {
+  display: flex;
+  gap: 24px;
+}
+
+.edu-item__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.edu-item__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-top: 6px;
+  box-shadow: 0 0 0 4px var(--bg-void);
+}
+
+.edu-item__dot--education {
+  background: var(--accent-cyan);
+}
+
+.edu-item__dot--certification {
+  background: var(--accent-amber);
+}
+
+.edu-item__line {
+  flex: 1;
+  width: 2px;
+  background: var(--border-soft);
+  margin-top: 4px;
+}
+
+.edu-item__content {
+  padding-bottom: 40px;
+}
+
+.edu-item__year {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.edu-item__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  margin: 6px 0 6px;
+}
+
+.edu-item__detail {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
